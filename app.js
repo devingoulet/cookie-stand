@@ -1,16 +1,14 @@
 'use strict';
 
-class Cities {
-    constructor() {
+function Cities(minimumCust, maximumCust, location, averageCookieSales, hourlySales, totalSales) {
+        this.location
         this.minimumCust = minimumCust;
         this.maximumCust = maximumCust;
-        this.location = location;
         this.averageCookieSales = averageCookieSales;
         this.hourlySales = [];
-        this.picture = picture;
         this.totalSales = 0;
     }
-}
+
 
 var time = [ '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
@@ -35,7 +33,7 @@ Cities.prototype.overallSales = function(){
     }
 };
 
-Cities.prototype.renderTableRow =(){
+Cities.prototype.renderTableRow =() {
     var tableElToTarget = document.getElementById('sales-table');
 
     var newTrEl = document.createElement('tr');
@@ -121,3 +119,4 @@ var paris = new Cities('Paris', 20, 38, 2.3)
 paris.getRandom();
 paris.totalSales();
 paris.renderTableRow();
+
